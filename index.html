@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim do Alvorecer - Espiritualidade e Cura Holística</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'violet-950': '#2c0a4d', 
+                        'purple-900': '#3d0d6d',
+                        'indigo-950': '#1f0d3d',
+                        'violet-300': '#c4b5fd',
+                        'purple-300': '#d8b4fe',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Define o movimento flutuante suave e sutil */
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(1deg); /* Move um pouco para cima */
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        /* Define o movimento de rotação muito lenta para o fundo */
+        @keyframes slow-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Aplica o movimento de flutuação */
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-delay {
+            animation: float 7s ease-in-out infinite;
+            animation-delay: 1.5s; /* Para começar em um tempo diferente */
+        }
+
+        .animate-spin-slow {
+            animation: slow-rotate 180s linear infinite;
+        }
+        
+        /* NOVO: Estilo para as bolinhas/partículas flutuantes */
+        .star-glow {
+            box-shadow: 0 0 5px #c4b5fd, 0 0 10px #d8b4fe; /* Brilho sutil */
+            animation: float 4s ease-in-out infinite alternate; /* Flutua de forma sutil */
+        }
+    </style>
+    </head>
+<body>
+    <div id="root">
+        <div class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-indigo-950">
+            <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-violet-950/95 backdrop-blur-md shadow-lg shadow-purple-500/20">
+                <nav class="container mx-auto px-4 py-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
+                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                <path d="M5 3v4"></path>
+                                <path d="M19 17v4"></path>
+                                <path d="M3 5h4"></path>
+                                <path d="M17 19h4"></path>
+                            </svg>
+                            <span class="text-2xl font-bold bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent">Jardim do Alvorecer</span>
+                        </div>
+                        <div class="hidden md:flex items-center gap-8">
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Início</button>
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Sobre</button>
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Serviços</button>
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Cursos</button>
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Palestras</button>
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">TikTok</button>
+                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Contato</button>
+                        </div>
+                        <button class="md:hidden text-violet-200 hover:text-violet-300 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <line x1="4" x2="20" y1="12" y2="12"></line>
+                                <line x1="4" x2="20" y1="6" y2="6"></line>
+                                <line x1="4" x2="20" y1="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+            </header>
+            
+            <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="absolute -inset-24 bg-gradient-to-br from-violet-900 via-purple-950 to-indigo-950 opacity-50 animate-spin-slow" style="transform: scale(1.0688) rotate(10.3207deg) translateZ(0px);"></div>
+                    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl animate-float" style="transform: scale(1.10336) rotate(266.976deg) translateZ(0px);"></div>
+                    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delay" style="transform: scale(1.00288) rotate(182.592deg) translateZ(0px);"></div>
+                    <div class="absolute top-0 left-0 w-2/3 h-2/3 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-float-delay" style="transform: translateX(-13.0374%) translateY(-17.3832%) translateZ(0px);"></div>
+                    <div class="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl from-violet-500/20 to-transparent rounded-full blur-3xl animate-float" style="transform: translateX(10.533%) translateY(14.044%) translateZ(0px);"></div>
+                    
+                    <div class="absolute inset-0 pointer-events-none">
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 97%; top: 25%; animation-delay: 0.5s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 90%; top: 78%; animation-delay: 1.2s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 54%; top: 85%; animation-delay: 2.1s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 3%; top: 13%; animation-delay: 0.9s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 50%; top: 73%; animation-delay: 3.4s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 81%; top: 90%; animation-delay: 0.1s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 56%; top: 3%; animation-delay: 2.7s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 1%; top: 41%; animation-delay: 1.8s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 79%; top: 85%; animation-delay: 0.7s;"></div>
+                        <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 49%; top: 92%; animation-delay: 2.5s;"></div>
+                    </div>
+                    <div class="absolute animate-float-delay" style="top: 20%; left: 10%; transform: translateX(-0.18559px) translateY(0.24745px) translateZ(0px);">
+                        <div class="relative w-16 h-16" style="transform: rotate(29.5056deg) translateZ(0px);">
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.04643) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.01218) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.04768) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03864) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.04789) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.00663) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.01023) translateZ(0px);"></div>
+                        </div>
+                    </div>
+                    <div class="absolute animate-float" style="bottom: 15%; right: 15%; transform: translateX(-3.2594px) translateY(4.34587px) translateZ(0px);">
+                        <div class="relative w-16 h-16" style="transform: rotate(29.4768deg) translateZ(0px);">
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.0098) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.04125) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.04162) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03879) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.02889) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03022) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.07312) translateZ(0px);"></div>
+                        </div>
+                    </div>
+                    <div class="absolute animate-float-delay" style="top: 50%; right: 25%; transform: translateX(-4.74094px) translateY(6.32126px) translateZ(0px);">
+                        <div class="relative w-16 h-16" style="transform: rotate(29.448deg) translateZ(0px);">
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.0003) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03047) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03158) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03498) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.00395) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.01556) translateZ(0px); opacity: 0.7;"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.19917) translateZ(0px);"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center space-y-8">
+                        <div class="flex justify-center gap-4 mb-8">
+                            <div class="animate-float" style="transform: translateY(-0.741419px) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-violet-300 drop-shadow-[0_0_8px_rgba(196,181,253,0.5)]">
+                                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                    <path d="M5 3v4"></path>
+                                    <path d="M19 17v4"></path>
+                                    <path d="M3 5h4"></path>
+                                    <path d="M17 19h4"></path>
+                                </svg>
+                            </div>
+                            <div class="animate-float-delay" style="transform: translateY(-0.970205px) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-300 drop-shadow-[0_0_8px_rgba(216,180,254,0.5)]">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                </svg>
+                            </div>
+                            <div class="animate-float" style="transform: translateY(-3.77701px) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-violet-300 drop-shadow-[0_0_8px_rgba(196,181,253,0.5)]">
+                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-200 via-purple-200 to-violet-300 bg-clip-text text-transparent">Jardim do Alvorecer</h1>
+                        <p class="text-xl md:text-2xl text-violet-200 max-w-3xl mx-auto">Um espaço sagrado de cura, transformação e despertar espiritual</p>
+                        <p class="text-lg text-violet-300 max-w-2xl mx-auto">Descubra o poder da Apometria, Reiki e Fitoterapia em sua jornada de autoconhecimento</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                            <button class="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0" style="box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(168, 85, 247, 0.5) 0px 10px 15px -3px, rgba(168, 85, 247, 0.5) 0px 4px 6px -4px;">Agende sua Consulta</button>
+                            <button class="px-8 py-4 border-2 border-violet-400 text-violet-200 rounded-full font-semibold text-lg hover:bg-violet-400/10 transition-all" tabindex="0">Conheça os Cursos</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="py-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-violet-900/20 to-transparent"></div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-200 to-purple-200 bg-clip-text text-transparent mb-6">Sobre o Jardim do Alvorecer</h2>
+                        <p class="text-lg text-violet-200 max-w-3xl mx-auto">Somos um centro espiritual dedicado à cura, ao crescimento pessoal e ao despertar da consciência. Através de práticas milenares e terapias holísticas, guiamos você em sua jornada de transformação interior.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                    <path d="M5 3v4"></path>
+                                    <path d="M19 17v4"></path>
+                                    <path d="M3 5h4"></path>
+                                    <path d="M17 19h4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Energia Espiritual</h3>
+                            <p class="text-violet-300 text-center">Trabalhamos com energias sutis para promover equilíbrio e harmonia</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Cura Holística</h3>
+                            <p class="text-violet-300 text-center">Abordagem integral que considera corpo, mente e espírito</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Terapias Naturais</h3>
+                            <p class="text-violet-300 text-center">Utilizamos o poder das plantas e da natureza para cura</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Transformação</h3>
+                            <p class="text-violet-300 text-center">Facilitamos processos profundos de autoconhecimento e evolução</p>
+                        </div>
+                    </div>
+                    <div class="mt-16 text-center">
+                        <div class="bg-gradient-to-r from-violet-900/40 via-purple-900/40 to-violet-900/40 backdrop-blur-sm p-8 rounded-2xl border border-violet-500/20 max-w-4xl mx-auto">
+                            <p class="text-lg text-violet-200 leading-relaxed">No Jardim do Alvorecer, acreditamos que cada ser humano possui um potencial infinito de cura e transformação. Nossa missão é criar um espaço acolhedor onde você possa reconectar-se com sua essência, encontrar paz interior e despertar para uma vida mais plena e consciente.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="services" class="py-20 relative overflow-hidden">
+                <div class="absolute inset-0">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-float-delay" style="opacity: 0.3; transform: scale(1.09999) translateZ(0px);"></div>
+                </div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-200 to-purple-200 bg-clip-text text-transparent mb-6">Nossos Serviços</h2>
+                        <p class="text-lg text-violet-200 max-w-3xl mx-auto">Oferecemos uma variedade de terapias holísticas e práticas espirituais para sua jornada de cura e transformação</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                    <path d="M5 3v4"></path>
+                                    <path d="M19 17v4"></path>
+                                    <path d="M3 5h4"></path>
+                                    <path d="M17 19h4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-violet-200 mb-4">Apometria</h3>
+                            <p class="text-violet-300 leading-relaxed">Técnica espiritual avançada que trabalha com desdobramento e harmonização energética, promovendo cura profunda em múltiplos níveis.</p>
+                            <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-violet-200 mb-4">Reiki</h3>
+                            <p class="text-violet-300 leading-relaxed">Terapia energética japonesa que canaliza energia universal para equilibrar corpo, mente e espírito, promovendo bem-estar integral.</p>
+                            <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-violet-200 mb-4">Fitoterapia</h3>
+                            <p class="text-violet-300 leading-relaxed">Uso terapêutico de plantas medicinais para tratamento natural, prevenção e promoção da saúde de forma holística.</p>
+                            <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-violet-200 mb-4">Limpeza Energética</h3>
+                            <p class="text-violet-300 leading-relaxed">Remoção de energias densas e bloqueios, restaurando o fluxo natural de energia vital e promovendo leveza e clareza.</p>
+                            <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses" class="py-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-violet-950/50 via-purple-950/50 to-violet-950/50"></div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <div class="flex justify-center mb-6">
+                            <div style="transform: rotate(216.486deg) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-violet-300">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-200 to-purple-200 bg-clip-text text-transparent mb-6">Cursos e Formações</h2>
+                        <p class="text-lg text-violet-200 max-w-3xl mx-auto">Desenvolva suas habilidades terapêuticas e espirituais com nossos cursos completos e certificados</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group">
+                            <div class="p-8">
+                                <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                        <path d="M5 3v4"></path>
+                                        <path d="M19 17v4"></path>
+                                        <path d="M3 5h4"></path>
+                                        <path d="M17 19h4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Curso de Apometria</h3>
+                                <p class="text-violet-300 mb-6 text-center">Aprenda as técnicas avançadas de Apometria para trabalhar com desdobramento espiritual e harmonização energética.</p>
+                                <div class="flex items-center justify-center gap-6 mb-6 text-violet-300">
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span class="text-sm">8 semanas</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                        <span class="text-sm">Turmas de até 15 alunos</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-3 mb-8">
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Fundamentos da Apometria</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Técnicas de desdobramento</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Harmonização energética</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Prática supervisionada</span>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Inscreva-se Agora</button>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group">
+                            <div class="p-8">
+                                <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Curso de Reiki</h3>
+                                <p class="text-violet-300 mb-6 text-center">Torne-se um praticante de Reiki e aprenda a canalizar energia universal para cura e equilíbrio.</p>
+                                <div class="flex items-center justify-center gap-6 mb-6 text-violet-300">
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span class="text-sm">6 semanas</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                        <span class="text-sm">Turmas de até 12 alunos</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-3 mb-8">
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Níveis I, II e III</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Símbolos sagrados</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Autotratamento</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Tratamento em outros</span>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Inscreva-se Agora</button>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group">
+                            <div class="p-8">
+                                <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Curso de Fitoterapia</h3>
+                                <p class="text-violet-300 mb-6 text-center">Descubra o poder curativo das plantas medicinais e aprenda a utilizá-las de forma segura e eficaz.</p>
+                                <div class="flex items-center justify-center gap-6 mb-6 text-violet-300">
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span class="text-sm">10 semanas</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                        <span class="text-sm">Turmas de até 20 alunos</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-3 mb-8">
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Plantas medicinais brasileiras</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Preparação de remédios naturais</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Dosagem e contraindicações</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-violet-300">
+                                        <div class="w-2 h-2 bg-violet-400 rounded-full"></div><span class="text-sm">Cultivo de ervas</span>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Inscreva-se Agora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="lectures" class="py-20 relative overflow-hidden">
+                <div class="absolute inset-0">
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style="transform: scale(1.19843) rotate(89.2952deg) translateZ(0px);"></div>
+                </div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-200 to-purple-200 bg-clip-text text-transparent mb-6">Palestras Presenciais</h2>
+                        <p class="text-lg text-violet-200 max-w-3xl mx-auto">Participe de nossos encontros mensais e aprofunde seus conhecimentos espirituais em um ambiente acolhedor</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                            <div class="p-8">
+                                <div class="flex items-center justify-center mb-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">O Despertar da Consciência</h3>
+                                <p class="text-violet-300 mb-6 text-center text-sm leading-relaxed">Explore os caminhos do autoconhecimento e da expansão da consciência através de práticas meditativas e ensinamentos espirituais.</p>
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                        <span class="text-sm">Toda primeira sexta-feira do mês</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span class="text-sm">19:00 - 21:00</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        <span class="text-sm">Presencial</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                        <span class="text-sm">Vagas: 30 pessoas</span>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                            <div class="p-8">
+                                <div class="flex items-center justify-center mb-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Cura Através da Energia</h3>
+                                <p class="text-violet-300 mb-6 text-center text-sm leading-relaxed">Aprenda sobre os diferentes tipos de energia e como utilizá-las para promover cura física, emocional e espiritual.</p>
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                        <span class="text-sm">Toda terceira sexta-feira do mês</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span class="text-sm">19:00 - 21:00</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        <span class="text-sm">Presencial</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                        <span class="text-sm">Vagas: 30 pessoas</span>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                            <div class="p-8">
+                                <div class="flex items-center justify-center mb-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Plantas Sagradas e Medicina Natural</h3>
+                                <p class="text-violet-300 mb-6 text-center text-sm leading-relaxed">Descubra o poder das plantas medicinais e como integrá-las em sua jornada de cura e bem-estar.</p>
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                                            <line x1="16" x2="16" y1="2" y2="6"></line>
+                                            <line x1="8" x2="8" y1="2" y2="6"></line>
+                                            <line x1="3" x2="21" y1="10" y2="10"></line>
+                                        </svg>
+                                        <span class="text-sm">Toda segunda sexta-feira do mês</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span class="text-sm">19:00 - 21:00</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        <span class="text-sm">Presencial</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-violet-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-violet-400">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                        <span class="text-sm">Vagas: 30 pessoas</span>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tiktok" class="py-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-transparent"></div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <div class="flex justify-center mb-6" style="transform: scale(1.07907) rotate(87.7206deg) translateZ(0px);">
+                            <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
+                                    <path d="m22 8-6 4 6 4V8Z"></path>
+                                    <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-200 to-purple-200 bg-clip-text text-transparent mb-6">Estudos Espirituais no TikTok</h2>
+                        <p class="text-lg text-violet-200 max-w-3xl mx-auto mb-8">Acompanhe nossos vídeos diários com ensinamentos, meditações e dicas para sua jornada espiritual</p>
+                    </div>
+                    <div class="max-w-5xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                            <path d="M5 3v4"></path>
+                                            <path d="M19 17v4"></path>
+                                            <path d="M3 5h4"></path>
+                                            <path d="M17 19h4"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-violet-200 mb-1">Meditações Guiadas</h3>
+                                        <p class="text-violet-300 text-sm">Práticas diárias de meditação para paz interior</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-violet-200 mb-1">Ensinamentos Espirituais</h3>
+                                        <p class="text-violet-300 text-sm">Sabedoria ancestral em pílulas de conhecimento</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                            <path d="m22 8-6 4 6 4V8Z"></path>
+                                            <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-violet-200 mb-1">Dicas de Energia</h3>
+                                        <p class="text-violet-300 text-sm">Como manter sua energia equilibrada no dia a dia</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                            <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-violet-200 mb-1">Plantas Medicinais</h3>
+                                        <p class="text-violet-300 text-sm">Conhecendo o poder das ervas e suas aplicações</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-violet-900/60 via-purple-900/60 to-violet-900/60 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl text-center">
+                            <h3 class="text-2xl font-bold text-violet-200 mb-4">Junte-se à Nossa Comunidade</h3>
+                            <p class="text-violet-300 mb-6 max-w-2xl mx-auto">Milhares de pessoas já transformaram suas vidas através dos nossos ensinamentos. Siga-nos no TikTok e receba conteúdo espiritual diário!</p>
+                            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                                <div class="flex items-center gap-2 text-violet-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-pink-400">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                    </svg><span class="font-semibold">10k+ Curtidas</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-violet-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-blue-400">
+                                        <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+                                    </svg><span class="font-semibold">500+ Comentários</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-violet-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-green-400">
+                                        <circle cx="18" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="12" r="3"></circle>
+                                        <circle cx="18" cy="19" r="3"></circle>
+                                        <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
+                                        <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
+                                    </svg><span class="font-semibold">1k+ Compartilhamentos</span>
+                                </div>
+                            </div>
+                            <button class="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all inline-flex items-center gap-2" tabindex="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                    <path d="m22 8-6 4 6 4V8Z"></path>
+                                    <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                                </svg>Seguir no TikTok</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-20 relative overflow-hidden">
+                <div class="absolute inset-0">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-float-delay" style="opacity: 0.2; transform: scale(1.06792) translateZ(0px);"></div>
+                </div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-200 to-purple-200 bg-clip-text text-transparent mb-6">Entre em Contato</h2>
+                        <p class="text-lg text-violet-200 max-w-3xl mx-auto">Estamos aqui para ajudá-lo em sua jornada espiritual. Entre em contato conosco!</p>
+                    </div>
+                    <div class="max-w-5xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer">
+                                <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold text-violet-200 mb-2 text-center">Telefone/WhatsApp</h3>
+                                <p class="text-violet-300 text-center">(11) 93204-2459</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer">
+                                <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                        <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold text-violet-200 mb-2 text-center">WhatsApp</h3>
+                                <p class="text-violet-300 text-center">Envie uma mensagem</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all ">
+                                <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold text-violet-200 mb-2 text-center">Localização</h3>
+                                <p class="text-violet-300 text-center">Atendimento Presencial</p>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-violet-900/60 via-purple-900/60 to-violet-900/60 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl">
+                            <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Pagamento via PIX</h3>
+                            <p class="text-violet-300 mb-6 text-center">Realize seus pagamentos de forma rápida e segura através do PIX</p>
+                            <div class="bg-violet-950/50 p-6 rounded-2xl border border-violet-500/20 max-w-md mx-auto">
+                                <div class="flex items-center justify-between mb-4"><span class="text-violet-300 font-medium">Chave PIX (Telefone):</span></div>
+                                <div class="flex items-center gap-3 bg-violet-900/50 p-4 rounded-xl">
+                                    <span class="text-violet-200 font-mono text-lg flex-1">11932042459</span>
+                                    <button class="p-2 bg-gradient-to-r from-violet-600 to-purple-600 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all" tabindex="0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-white">
+                                            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                                            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="text-violet-400 text-sm mt-4 text-center">Clique no ícone para copiar a chave PIX</p>
+                            </div>
+                            <div class="mt-8 text-center">
+                                <button class="px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full font-semibold text-lg shadow-lg shadow-green-500/50 hover:shadow-green-500/70 transition-all inline-flex items-center gap-2" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                        <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+                                    </svg>Fale Conosco no WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="relative py-12 border-t border-violet-500/20">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-violet-950/50"></div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center space-y-6">
+                        <div class="flex justify-center gap-4 mb-6">
+                            <div class="animate-float" style="transform: translateY(-0.418538px) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
+                                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                    <path d="M5 3v4"></path>
+                                    <path d="M19 17v4"></path>
+                                    <path d="M3 5h4"></path>
+                                    <path d="M17 19h4"></path>
+                                </svg>
+                            </div>
+                            <div class="animate-float-delay" style="transform: translateY(-1.11079px) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-purple-300">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                </svg>
+                            </div>
+                            <div class="animate-float" style="transform: translateY(-4.00617px) translateZ(0px);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
+                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent">Jardim do Alvorecer</span>
+                        </div>
+                        <p class="text-violet-300 max-w-2xl mx-auto">Um espaço sagrado dedicado à cura, transformação e despertar espiritual</p>
+                        <div class="pt-6 border-t border-violet-500/20">
+                            <p class="text-violet-400 text-sm">© 2025 Jardim do Alvorecer. Todos os direitos reservados.</p>
+                            <p class="text-violet-400 text-sm mt-2">Feito com amor e luz ✨</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
