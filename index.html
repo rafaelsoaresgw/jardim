@@ -24,16 +24,23 @@
     </script>
     
     <style>
-        /* Define o movimento flutuante suave e sutil */
+        /* Define o movimento flutuante suave e sutil (APENAS PARA BACKGROUND E PARTÍCULAS) */
         @keyframes float {
             0% {
                 transform: translateY(0px) rotate(0deg);
             }
             50% {
-                transform: translateY(-20px) rotate(1deg); /* Move um pouco para cima */
+                transform: translateY(-20px) rotate(1deg);
             }
             100% {
                 transform: translateY(0px) rotate(0deg);
+            }
+        }
+        
+        /* ⬇️ NOVO: Animação de Rotação para o Ícone do Livro ⬇️ */
+        @keyframes icon-spin {
+            to {
+                transform: rotate(360deg);
             }
         }
 
@@ -47,27 +54,34 @@
             }
         }
 
-        /* Aplica o movimento de flutuação */
+        /* Classes de Animação */
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
-
         .animate-float-delay {
             animation: float 7s ease-in-out infinite;
-            animation-delay: 1.5s; /* Para começar em um tempo diferente */
+            animation-delay: 1.5s;
         }
-
         .animate-spin-slow {
             animation: slow-rotate 180s linear infinite;
         }
+        .animate-spin-icon {
+            animation: icon-spin 10s linear infinite; /* Aplicado somente ao livro */
+        }
         
-        /* NOVO: Estilo para as bolinhas/partículas flutuantes */
+        /* Estilo para as bolinhas/partículas flutuantes */
         .star-glow {
             box-shadow: 0 0 5px #c4b5fd, 0 0 10px #d8b4fe; /* Brilho sutil */
             animation: float 4s ease-in-out infinite alternate; /* Flutua de forma sutil */
         }
+
+        /* Efeito de BRILHO no HOVER dos CARDS */
+        .card-hover-glow:hover {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+            transform: translateY(-5px);
+        }
     </style>
-    </head>
+</head>
 <body>
     <div id="root">
         <div class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-indigo-950">
@@ -124,6 +138,7 @@
                         <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 79%; top: 85%; animation-delay: 0.7s;"></div>
                         <div class="absolute w-1 h-1 bg-violet-300 rounded-full star-glow" style="left: 49%; top: 92%; animation-delay: 2.5s;"></div>
                     </div>
+
                     <div class="absolute animate-float-delay" style="top: 20%; left: 10%; transform: translateX(-0.18559px) translateY(0.24745px) translateZ(0px);">
                         <div class="relative w-16 h-16" style="transform: rotate(29.5056deg) translateZ(0px);">
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.04643) translateZ(0px); opacity: 0.7;"></div>
@@ -143,7 +158,7 @@
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03879) translateZ(0px); opacity: 0.7;"></div>
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.02889) translateZ(0px); opacity: 0.7;"></div>
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03022) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.07312) translateZ(0px);"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.19917) translateZ(0px);"></div>
                         </div>
                     </div>
                     <div class="absolute animate-float-delay" style="top: 50%; right: 25%; transform: translateX(-4.74094px) translateY(6.32126px) translateZ(0px);">
@@ -162,7 +177,7 @@
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center space-y-8">
                         <div class="flex justify-center gap-4 mb-8">
-                            <div class="animate-float" style="transform: translateY(-0.741419px) translateZ(0px);">
+                            <div style="transform: translateY(-0.741419px) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-violet-300 drop-shadow-[0_0_8px_rgba(196,181,253,0.5)]">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
                                     <path d="M5 3v4"></path>
@@ -171,12 +186,12 @@
                                     <path d="M17 19h4"></path>
                                 </svg>
                             </div>
-                            <div class="animate-float-delay" style="transform: translateY(-0.970205px) translateZ(0px);">
+                            <div style="transform: translateY(-0.970205px) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-300 drop-shadow-[0_0_8px_rgba(216,180,254,0.5)]">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                                 </svg>
                             </div>
-                            <div class="animate-float" style="transform: translateY(-3.77701px) translateZ(0px);">
+                            <div style="transform: translateY(-3.77701px) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-violet-300 drop-shadow-[0_0_8px_rgba(196,181,253,0.5)]">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
                                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
@@ -202,7 +217,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Somos um centro espiritual dedicado à cura, ao crescimento pessoal e ao despertar da consciência. Através de práticas milenares e terapias holísticas, guiamos você em sua jornada de transformação interior.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
@@ -215,7 +230,7 @@
                             <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Energia Espiritual</h3>
                             <p class="text-violet-300 text-center">Trabalhamos com energias sutis para promover equilíbrio e harmonia</p>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
@@ -224,7 +239,7 @@
                             <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Cura Holística</h3>
                             <p class="text-violet-300 text-center">Abordagem integral que considera corpo, mente e espírito</p>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
@@ -234,7 +249,7 @@
                             <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Terapias Naturais</h3>
                             <p class="text-violet-300 text-center">Utilizamos o poder das plantas e da natureza para cura</p>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -316,7 +331,7 @@
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center mb-16">
                         <div class="flex justify-center mb-6">
-                            <div style="transform: rotate(216.486deg) translateZ(0px);">
+                            <div class="animate-spin-icon" style="transform: rotate(216.486deg) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-violet-300">
                                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
@@ -327,7 +342,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Desenvolva suas habilidades terapêuticas e espirituais com nossos cursos completos e certificados</p>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group">
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 card-hover-glow transition-all overflow-hidden group">
                             <div class="p-8">
                                 <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
@@ -478,7 +493,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Participe de nossos encontros mensais e aprofunde seus conhecimentos espirituais em um ambiente acolhedor</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
                             <div class="p-8">
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
@@ -529,7 +544,7 @@
                                 <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
                             <div class="p-8">
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
@@ -580,7 +595,7 @@
                                 <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
                             <div class="p-8">
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
@@ -652,7 +667,7 @@
                     </div>
                     <div class="max-w-5xl mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
                                 <div class="flex items-center gap-4">
                                     <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
@@ -734,11 +749,11 @@
                                     </svg><span class="font-semibold">1k+ Compartilhamentos</span>
                                 </div>
                             </div>
-                            <button class="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all inline-flex items-center gap-2" tabindex="0">
+                            <a href="https://www.tiktok.com/@cleber_r_oliveira?_r=1&_t=ZS-91NU0onoxzL" target="_blank" class="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all inline-flex items-center gap-2" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                                     <path d="m22 8-6 4 6 4V8Z"></path>
                                     <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
-                                </svg>Seguir no TikTok</button>
+                                </svg>Seguir no TikTok</a>
                         </div>
                     </div>
                 </div>
@@ -816,7 +831,7 @@
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center space-y-6">
                         <div class="flex justify-center gap-4 mb-6">
-                            <div class="animate-float" style="transform: translateY(-0.418538px) translateZ(0px);">
+                            <div style="transform: translateY(-0.418538px) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
                                     <path d="M5 3v4"></path>
@@ -825,12 +840,12 @@
                                     <path d="M17 19h4"></path>
                                 </svg>
                             </div>
-                            <div class="animate-float-delay" style="transform: translateY(-1.11079px) translateZ(0px);">
+                            <div style="transform: translateY(-1.11079px) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-purple-300">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                                 </svg>
                             </div>
-                            <div class="animate-float" style="transform: translateY(-4.00617px) translateZ(0px);">
+                            <div style="transform: translateY(-4.00617px) translateZ(0px);">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
                                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
