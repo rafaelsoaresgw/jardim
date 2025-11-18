@@ -26,6 +26,11 @@
     </script>
     
     <style>
+        /* NOVO: Garante a rolagem suave ao clicar nos links (efeito deslizante) */
+        html {
+            scroll-behavior: smooth;
+        }
+        
         /* Define o movimento flutuante suave e sutil (APENAS PARA BACKGROUND E PARTÍCULAS) */
         @keyframes float {
             0% {
@@ -101,13 +106,13 @@
                             <span class="text-2xl font-bold bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent">Jardim do Alvorecer</span>
                         </div>
                         <div class="hidden md:flex items-center gap-8">
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Início</button>
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Sobre</button>
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Serviços</button>
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Cursos</button>
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Palestras</button>
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">TikTok</button>
-                            <button class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Contato</button>
+                            <a href="#hero" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Início</a>
+                            <a href="#about" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Sobre</a>
+                            <a href="#services" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Serviços</a>
+                            <a href="#courses" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Cursos</a>
+                            <a href="#lectures" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Palestras</a>
+                            <a href="#tiktok" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">TikTok</a>
+                            <a href="#contact" class="text-violet-200 hover:text-violet-300 transition-colors font-medium">Contato</a>
                         </div>
                         <button class="md:hidden text-violet-200 hover:text-violet-300 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
@@ -160,17 +165,6 @@
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03879) translateZ(0px); opacity: 0.7;"></div>
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.02889) translateZ(0px); opacity: 0.7;"></div>
                             <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03022) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.19917) translateZ(0px);"></div>
-                        </div>
-                    </div>
-                    <div class="absolute animate-float-delay" style="top: 50%; right: 25%; transform: translateX(-4.74094px) translateY(6.32126px) translateZ(0px);">
-                        <div class="relative w-16 h-16" style="transform: rotate(29.448deg) translateZ(0px);">
-                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.0003) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03047) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03158) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.03498) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.00395) translateZ(0px); opacity: 0.7;"></div>
-                            <div class="absolute w-8 h-16 bg-gradient-to-b from-violet-400/40 to-purple-500/10 rounded-[50%_50%_50%_50%_/_80%_80%_20%_20%]" style="transform-origin: center bottom; transform: scale(1.01556) translateZ(0px); opacity: 0.7;"></div>
                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-violet-200" style="box-shadow: rgb(233, 213, 255) 0px 0px 10px, rgb(216, 180, 254) 0px 0px 20px, rgb(168, 85, 247) 0px 0px 30px; transform: scale(1.19917) translateZ(0px);"></div>
                         </div>
                     </div>
@@ -333,7 +327,7 @@
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center mb-16">
                         <div class="flex justify-center mb-6">
-                            <div class="animate-spin-icon" style="transform: rotate(216.486deg) translateZ(0px);">
+                            <div class="animate-spin-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-violet-300">
                                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
@@ -828,12 +822,12 @@
                 </div>
             </section>
 
-            <footer class="relative py-12 border-t border-violet-500/20">
+            <footer class="relative py-12 border-t border-violet-500/20" data-aos="fade-up">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-violet-950/50"></div>
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center space-y-6">
                         <div class="flex justify-center gap-4 mb-6">
-                            <div style="transform: translateY(-0.418538px) translateZ(0px);">
+                            <div class="animate-float">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
                                     <path d="M5 3v4"></path>
@@ -842,23 +836,23 @@
                                     <path d="M17 19h4"></path>
                                 </svg>
                             </div>
-                            <div style="transform: translateY(-1.11079px) translateZ(0px);">
+                            <div class="animate-float-delay">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-purple-300">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                                 </svg>
                             </div>
-                            <div style="transform: translateY(-4.00617px) translateZ(0px);">
+                            <div class="animate-float">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-violet-300">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
                                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
                                 </svg>
                             </div>
                         </div>
-                        <div>
+                        <div data-aos="zoom-in" data-aos-delay="100">
                             <span class="text-2xl font-bold bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent">Jardim do Alvorecer</span>
                         </div>
-                        <p class="text-violet-300 max-w-2xl mx-auto">Um espaço sagrado dedicado à cura, transformação e despertar espiritual</p>
-                        <div class="pt-6 border-t border-violet-500/20">
+                        <p class="text-violet-300 max-w-2xl mx-auto" data-aos="zoom-in" data-aos-delay="200">Um espaço sagrado dedicado à cura, transformação e despertar espiritual</p>
+                        <div class="pt-6 border-t border-violet-500/20" data-aos="fade-up" data-aos-delay="300">
                             <p class="text-violet-400 text-sm">© 2025 Jardim do Alvorecer. Todos os direitos reservados.</p>
                             <p class="text-violet-400 text-sm mt-2">Feito com amor e luz ✨</p>
                         </div>
