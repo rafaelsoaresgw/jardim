@@ -7,6 +7,8 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -66,7 +68,7 @@
             animation: slow-rotate 180s linear infinite;
         }
         .animate-spin-icon {
-            animation: icon-spin 10s linear infinite; /* Aplicado somente ao livro */
+            animation: icon-spin 10s linear infinite; /* Aplicado agora ao livro e ao ícone do TikTok */
         }
         
         /* Estilo para as bolinhas/partículas flutuantes */
@@ -177,7 +179,7 @@
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center space-y-8">
                         <div class="flex justify-center gap-4 mb-8">
-                            <div style="transform: translateY(-0.741419px) translateZ(0px);">
+                            <div class="animate-float">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-violet-300 drop-shadow-[0_0_8px_rgba(196,181,253,0.5)]">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
                                     <path d="M5 3v4"></path>
@@ -186,12 +188,12 @@
                                     <path d="M17 19h4"></path>
                                 </svg>
                             </div>
-                            <div style="transform: translateY(-0.970205px) translateZ(0px);">
+                            <div class="animate-float-delay">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-300 drop-shadow-[0_0_8px_rgba(216,180,254,0.5)]">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                                 </svg>
                             </div>
-                            <div style="transform: translateY(-3.77701px) translateZ(0px);">
+                            <div class="animate-float">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-violet-300 drop-shadow-[0_0_8px_rgba(196,181,253,0.5)]">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
                                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
@@ -209,7 +211,7 @@
                 </div>
             </section>
 
-            <section id="about" class="py-20 relative overflow-hidden">
+            <section id="about" class="py-20 relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-violet-900/20 to-transparent"></div>
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center mb-16">
@@ -217,7 +219,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Somos um centro espiritual dedicado à cura, ao crescimento pessoal e ao despertar da consciência. Através de práticas milenares e terapias holísticas, guiamos você em sua jornada de transformação interior.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all" data-aos="zoom-in" data-aos-delay="100">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
@@ -230,7 +232,7 @@
                             <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Energia Espiritual</h3>
                             <p class="text-violet-300 text-center">Trabalhamos com energias sutis para promover equilíbrio e harmonia</p>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all" data-aos="zoom-in" data-aos-delay="200">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
@@ -239,7 +241,7 @@
                             <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Cura Holística</h3>
                             <p class="text-violet-300 text-center">Abordagem integral que considera corpo, mente e espírito</p>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all" data-aos="zoom-in" data-aos-delay="300">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
@@ -249,7 +251,7 @@
                             <h3 class="text-xl font-semibold text-violet-200 mb-3 text-center">Terapias Naturais</h3>
                             <p class="text-violet-300 text-center">Utilizamos o poder das plantas e da natureza para cura</p>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
+                        <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all" data-aos="zoom-in" data-aos-delay="400">
                             <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-white">
                                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -259,7 +261,7 @@
                             <p class="text-violet-300 text-center">Facilitamos processos profundos de autoconhecimento e evolução</p>
                         </div>
                     </div>
-                    <div class="mt-16 text-center">
+                    <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="500">
                         <div class="bg-gradient-to-r from-violet-900/40 via-purple-900/40 to-violet-900/40 backdrop-blur-sm p-8 rounded-2xl border border-violet-500/20 max-w-4xl mx-auto">
                             <p class="text-lg text-violet-200 leading-relaxed">No Jardim do Alvorecer, acreditamos que cada ser humano possui um potencial infinito de cura e transformação. Nossa missão é criar um espaço acolhedor onde você possa reconectar-se com sua essência, encontrar paz interior e despertar para uma vida mais plena e consciente.</p>
                         </div>
@@ -267,7 +269,7 @@
                 </div>
             </section>
             
-            <section id="services" class="py-20 relative overflow-hidden">
+            <section id="services" class="py-20 relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0">
                     <div class="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-float-delay" style="opacity: 0.3; transform: scale(1.09999) translateZ(0px);"></div>
                 </div>
@@ -277,7 +279,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Oferecemos uma variedade de terapias holísticas e práticas espirituais para sua jornada de cura e transformação</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group" data-aos="zoom-in" data-aos-delay="100">
                             <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
                                     <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
@@ -291,7 +293,7 @@
                             <p class="text-violet-300 leading-relaxed">Técnica espiritual avançada que trabalha com desdobramento e harmonização energética, promovendo cura profunda em múltiplos níveis.</p>
                             <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group" data-aos="zoom-in" data-aos-delay="200">
                             <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
@@ -301,7 +303,7 @@
                             <p class="text-violet-300 leading-relaxed">Terapia energética japonesa que canaliza energia universal para equilibrar corpo, mente e espírito, promovendo bem-estar integral.</p>
                             <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group" data-aos="zoom-in" data-aos-delay="300">
                             <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
                                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
@@ -312,7 +314,7 @@
                             <p class="text-violet-300 leading-relaxed">Uso terapêutico de plantas medicinais para tratamento natural, prevenção e promoção da saúde de forma holística.</p>
                             <div class="h-1 bg-gradient-to-r from-violet-500 to-purple-500 mt-6 rounded-full" style="width: 0px;"></div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer group" data-aos="zoom-in" data-aos-delay="400">
                             <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
                                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
@@ -326,7 +328,7 @@
                 </div>
             </section>
 
-            <section id="courses" class="py-20 relative overflow-hidden">
+            <section id="courses" class="py-20 relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0 bg-gradient-to-b from-violet-950/50 via-purple-950/50 to-violet-950/50"></div>
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center mb-16">
@@ -342,7 +344,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Desenvolva suas habilidades terapêuticas e espirituais com nossos cursos completos e certificados</p>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 card-hover-glow transition-all overflow-hidden group">
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 card-hover-glow transition-all overflow-hidden group" data-aos="zoom-in" data-aos-delay="100">
                             <div class="p-8">
                                 <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
@@ -390,7 +392,7 @@
                                 <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Inscreva-se Agora</button>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group">
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
                             <div class="p-8">
                                 <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
@@ -434,7 +436,7 @@
                                 <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Inscreva-se Agora</button>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group">
+                        <div class="bg-gradient-to-br from-violet-900/60 to-purple-900/60 backdrop-blur-sm rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden group" data-aos="zoom-in" data-aos-delay="300">
                             <div class="p-8">
                                 <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
@@ -483,7 +485,7 @@
                 </div>
             </section>
 
-            <section id="lectures" class="py-20 relative overflow-hidden">
+            <section id="lectures" class="py-20 relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0">
                     <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style="transform: scale(1.19843) rotate(89.2952deg) translateZ(0px);"></div>
                 </div>
@@ -493,7 +495,7 @@
                         <p class="text-lg text-violet-200 max-w-3xl mx-auto">Participe de nossos encontros mensais e aprofunde seus conhecimentos espirituais em um ambiente acolhedor</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden" data-aos="flip-left" data-aos-delay="100">
                             <div class="p-8">
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
@@ -544,7 +546,7 @@
                                 <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden" data-aos="flip-left" data-aos-delay="200">
                             <div class="p-8">
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
@@ -595,7 +597,7 @@
                                 <button class="w-full py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-full font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all" tabindex="0">Reservar Vaga</button>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden">
+                        <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all overflow-hidden" data-aos="flip-left" data-aos-delay="300">
                             <div class="p-8">
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
@@ -650,11 +652,11 @@
                 </div>
             </section>
 
-            <section id="tiktok" class="py-20 relative overflow-hidden">
+            <section id="tiktok" class="py-20 relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-transparent"></div>
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center mb-16">
-                        <div class="flex justify-center mb-6" style="transform: scale(1.07907) rotate(87.7206deg) translateZ(0px);">
+                        <div class="flex justify-center mb-6 animate-spin-icon">
                             <div class="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-white">
                                     <path d="m22 8-6 4 6 4V8Z"></path>
@@ -667,7 +669,7 @@
                     </div>
                     <div class="max-w-5xl mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all">
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 card-hover-glow transition-all" data-aos="zoom-in-right" data-aos-delay="100">
                                 <div class="flex items-center gap-4">
                                     <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
@@ -684,7 +686,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all" data-aos="zoom-in-left" data-aos-delay="200">
                                 <div class="flex items-center gap-4">
                                     <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
@@ -697,7 +699,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all" data-aos="zoom-in-right" data-aos-delay="300">
                                 <div class="flex items-center gap-4">
                                     <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
@@ -711,7 +713,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all">
+                            <div class="bg-gradient-to-br from-violet-900/40 to-purple-900/40 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/20 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 transition-all" data-aos="zoom-in-left" data-aos-delay="400">
                                 <div class="flex items-center gap-4">
                                     <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
@@ -725,7 +727,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-violet-900/60 via-purple-900/60 to-violet-900/60 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl text-center">
+                        <div class="bg-gradient-to-r from-violet-900/60 via-purple-900/60 to-violet-900/60 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl text-center" data-aos="fade-up" data-aos-delay="500">
                             <h3 class="text-2xl font-bold text-violet-200 mb-4">Junte-se à Nossa Comunidade</h3>
                             <p class="text-violet-300 mb-6 max-w-2xl mx-auto">Milhares de pessoas já transformaram suas vidas através dos nossos ensinamentos. Siga-nos no TikTok e receba conteúdo espiritual diário!</p>
                             <div class="flex flex-wrap justify-center gap-4 mb-8">
@@ -759,7 +761,7 @@
                 </div>
             </section>
 
-            <section id="contact" class="py-20 relative overflow-hidden">
+            <section id="contact" class="py-20 relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0">
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-float-delay" style="opacity: 0.2; transform: scale(1.06792) translateZ(0px);"></div>
                 </div>
@@ -770,7 +772,7 @@
                     </div>
                     <div class="max-w-5xl mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer">
+                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
                                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -779,7 +781,7 @@
                                 <h3 class="text-lg font-semibold text-violet-200 mb-2 text-center">Telefone/WhatsApp</h3>
                                 <p class="text-violet-300 text-center">(11) 93204-2459</p>
                             </div>
-                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer">
+                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
                                         <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
@@ -788,7 +790,7 @@
                                 <h3 class="text-lg font-semibold text-violet-200 mb-2 text-center">WhatsApp</h3>
                                 <p class="text-violet-300 text-center">Envie uma mensagem</p>
                             </div>
-                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all ">
+                            <div class="bg-gradient-to-br from-violet-900/50 to-purple-900/50 backdrop-blur-sm p-6 rounded-2xl border border-violet-500/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all " data-aos="zoom-in" data-aos-delay="300">
                                 <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-white">
                                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
@@ -799,7 +801,7 @@
                                 <p class="text-violet-300 text-center">Atendimento Presencial</p>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-r from-violet-900/60 via-purple-900/60 to-violet-900/60 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl">
+                        <div class="bg-gradient-to-r from-violet-900/60 via-purple-900/60 to-violet-900/60 backdrop-blur-sm p-8 rounded-3xl border border-violet-500/30 shadow-xl" data-aos="fade-up" data-aos-delay="400">
                             <h3 class="text-2xl font-bold text-violet-200 mb-4 text-center">Pagamento via PIX</h3>
                             <p class="text-violet-300 mb-6 text-center">Realize seus pagamentos de forma rápida e segura através do PIX</p>
                             <div class="bg-violet-950/50 p-6 rounded-2xl border border-violet-500/20 max-w-md mx-auto">
@@ -865,5 +867,14 @@
             </footer>
         </div>
     </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Duração da animação em milissegundos
+            once: true, // Se a animação deve acontecer apenas uma vez (ao carregar a seção)
+            easing: 'ease-in-out', // Tipo de suavização
+        });
+    </script>
 </body>
 </html>
